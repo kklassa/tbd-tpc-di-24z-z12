@@ -10,10 +10,10 @@ tbd_tpcdi:
         "spark.log.level": "INFO"
         "spark.master": "yarn"
         "spark.submit.deployMode": "client"
-        "spark.driver.port": "30000"
-        "spark.blockManager.port": "30001"
-        "spark.driver.host": "10.11.0.3"  #FIXME: Result of the command (kubectl get nodes -o json |  jq -r '.items[0].status.addresses[0].address')
-        "spark.driver.bindAddress": "0.0.0.0"
+        #"spark.driver.port": "30000"
+        #"spark.blockManager.port": "30001"
+        #"spark.driver.host": "10.11.0.3"  #FIXME: Result of the command (kubectl get nodes -o json |  jq -r '.items[0].status.addresses[0].address')
+        #"spark.driver.bindAddress": "0.0.0.0"
         "spark.driver.memory": "2g"
         "spark.executor.memory": "4g"
         "spark.executor.instances": "2"
