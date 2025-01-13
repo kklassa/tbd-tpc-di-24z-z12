@@ -35,7 +35,9 @@ def process_files(
         show: Annotated[bool, typer.Option(
             help="Show the DataFrame instead of saving it as a table? This was useful during development.")] = False,
 ):
+    print("Entering process_files")
     session = get_session()
+    print("Got session")
 
     def get_stage_path(
             stage: str,
@@ -65,7 +67,7 @@ def process_files(
             file_name: str,
             stage_path: str,
     ):
-
+        print(f"Uploading files for {file_name}")
         delimiter = "|"
 
         if file_name == 'FINWIRE':
@@ -99,6 +101,7 @@ def process_files(
             file_name: str,
             table_name: str,
     ):
+        print(f"Loading CSV for {file_name} to {table_name}")
         stage_path = get_stage_path(stage, file_name)
         delimiter = upload_files(file_name, stage)
 
