@@ -16,5 +16,5 @@ tbd_tpcdi:
         #"spark.driver.bindAddress": "0.0.0.0"
         "spark.driver.memory": "2g"
         "spark.executor.memory": "4g"
-        "spark.executor.instances": "2"
+        "spark.executor.instances": "1"
         "spark.hadoop.hive.metastore.warehouse.dir": "hdfs:///user/hive/warehouse/"
